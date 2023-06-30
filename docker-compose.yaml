@@ -17,7 +17,7 @@ services:
       - db
     image: wordpress:latest
     ports:
-      - 80:80
+      - 8080:80
       - 443:443
     restart: always
     volumes:
@@ -28,9 +28,6 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: your_mysql_password
       WORDPRESS_DB_NAME: wordpress
-      VIRTUAL_HOST: your_domain.com
-      LETSENCRYPT_HOST: your_domain.com
-      LETSENCRYPT_EMAIL: your_email@example.com
 
 volumes:
   db_data:
