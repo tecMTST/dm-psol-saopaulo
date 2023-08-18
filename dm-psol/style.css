@@ -7,3 +7,58 @@
 	Author URI: 	https://nucleodetecnologia.com.br/
 	Tags: 				psol, mtst
 */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&family=Roboto&display=swap");
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+footer {
+  background: #eff2f6;
+  padding: 48px 0 19px;
+}
+footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  width: 265px;
+  margin: 0 auto;
+}
+
+footer .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+footer .social a {
+  font-size: 24px;
+  line-height: 24px;
+  color: #1a202c !important;
+  margin-right: 16px;
+}
+
+footer .social a:hover {
+  color: #68008e !important;
+  transition: all 0.3s;
+}
+
+footer .social a:last-of-type {
+  margin-right: 0;
+}
+
+footer p {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  height: 20px;
+  color: #1a202c;
+}
