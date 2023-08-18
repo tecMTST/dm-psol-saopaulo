@@ -43,10 +43,83 @@ section h1 {
   letter-spacing: -0.24px;
 }
 
+.vereadores {
+  position: relative;
+  clear: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.vereadores .vereadores-linha:nth-child(even) {
+  margin-left: 130px;
+}
+
+.vereador {
+  float: left;
+  position: relative;
+  margin-left: 33px;
+  margin-bottom: 10px;
+  z-index: 3;
+}
+
+.vereador:hover {
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
+
+.vereador::before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  z-index: 0;
+  width: 130px;
+  height: 150px;
+  background: #f8d11b;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.vereadores-linha:nth-child(odd) .vereador:nth-child(odd)::before,
+.vereadores-linha:nth-child(even) .vereador:nth-child(even)::before {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.vereadores-linha:nth-child(odd) .vereador:nth-child(odd):hover:before,
+.vereadores-linha:nth-child(even) .vereador:nth-child(even):hover:before {
+  margin-top: -5px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.vereadores-linha:nth-child(odd) .vereador:nth-child(even)::before,
+.vereadores-linha:nth-child(even) .vereador:nth-child(odd)::before {
+  margin-top: -10px;
+  margin-left: -5px;
+}
+
+.vereadores-linha:nth-child(odd) .vereador:nth-child(even):hover:before,
+.vereadores-linha:nth-child(even) .vereador:nth-child(odd):hover:before {
+  margin-top: 5px;
+  margin-left: -10px;
+  transition: 0.3s ease-in-out;
+}
+
+.vereador img {
+  object-fit: cover;
+  width: 130px;
+  height: 150px;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
 footer {
   background: #eff2f6;
   padding: 48px 0 19px;
 }
+
 footer .wrapper {
   display: flex;
   flex-direction: column;

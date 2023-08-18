@@ -3,27 +3,39 @@
 <div class="wrapper">
 	<section>
 		<h1>VEREADORES</h1>
-		<?php 
-			$args = array(
-				'post_type' => 'vereadores',
-				'posts_per_page' => -1,
-				'orderby' => 'title',
-				'order' => 'ASC'
-			);
-			$vereadores = new WP_Query($args);
-			
-			if ($vereadores->have_posts()) {
-				while ($vereadores->have_posts()) {
-					$vereadores->the_post();
-					?>
-					<div class="vereador">
-						<h2><?php the_title(); ?></h2>
-						<?php the_post_thumbnail(); ?>
-					</div>
-					<?php
+		<div class="vereadores">
+			<?php 
+				$args = array(
+					'post_type' => 'vereadores',
+					'posts_per_page' => -1,
+					'orderby' => 'title',
+					'order' => 'ASC'
+				);
+				$vereadores = new WP_Query($args);
+				
+				if ($vereadores->have_posts()) {
+						$counter = 0;
+						while ($vereadores->have_posts()) {
+								$vereadores->the_post();
+								$counter++;
+								if ($counter % 3 == 1) {
+										echo '<div class="vereadores-linha">';
+								}
+								?>
+								<div class="vereador">
+										<img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+								</div>
+								<?php
+								if ($counter % 3 == 0) {
+										echo '</div>';
+								}
+						}
+						if ($counter % 3 != 0) {
+								echo '</div>';
+						}
 				}
-			}
-		?>
+			?>
+		</div>
 	</section>
 </div>
 
