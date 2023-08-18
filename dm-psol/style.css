@@ -8,11 +8,39 @@
 	Tags: 				psol, mtst
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Plus+Jakarta+Sans:wght@500;800&family=Roboto&display=swap");
 
 .wrapper {
   width: 1280px;
   margin: 0 auto;
+}
+
+.navbar {
+  height: 132px;
+  padding: 16px 0;
+}
+
+.navbar-brand {
+  display: block;
+  padding: 0;
+}
+
+.navbar-brand img {
+  width: 245px;
+}
+
+section {
+  padding: 48px 0;
+}
+
+section h1 {
+  color: #000;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.24px;
 }
 
 footer {

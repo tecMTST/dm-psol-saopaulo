@@ -69,3 +69,33 @@
 			</div>
 		<?php endif;
 	}
+
+	add_action('init', 'vereadores_register');
+	function vereadores_register() {
+    $labels = array(
+        'name'                  => __('Vereadores'),
+        'singular_name'         => __('Vereador'),
+        'add_new'               => __('Novo vereador'),
+        'add_new_item'          => __('Novo vereador'),
+        'edit_item'             => __('Editar vereador'),
+        'new_item'              => __('Novo vereador'),
+        'view_item'             => __('Ver vereador'),
+        'search_items'          => __('Procurar vereador'),
+        'not_found'             => __('Nenhum resultado'),
+        'not_found_in_trash'    => __('Nenhum resultado'),
+        'parent_item_colon'     => '',
+        'menu_name'             => __('Vereadores')
+    );
+    $args = array(
+        'labels'                => $labels,
+        'public'                => true,
+        'show_ui'               => true,
+        'capability_type'       => 'post',
+        'hierarchical'          => true,
+        'rewrite'               => array('slug' => 'vereadores'),
+        'supports'              => array('title', 'thumbnail'),
+        'menu_position'         => null,
+        'menu_icon'             => 'dashicons-groups'
+    );
+    register_post_type('vereadores', $args);
+	}

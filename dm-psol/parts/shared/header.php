@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="<?php echo home_url(); ?>">
-        <?php bloginfo('name'); ?>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/navbar-logo.png" alt="Logo">
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
@@ -16,14 +16,13 @@
         wp_nav_menu( array(
             'menu'              => 'primary',
             'theme_location'    => 'primary',
-            'depth'             => 2,
+            'depth'             => 1,
             'container'         => false,
             'menu_class'        => 'nav navbar-nav',
             'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
             'walker'            => new wp_bootstrap_navwalker())
         );
         ?>
-      <?php get_search_form(); ?>
     </div>
   </div>
 </nav>
