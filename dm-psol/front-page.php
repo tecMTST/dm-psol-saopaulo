@@ -23,6 +23,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="noticias">
 		<h2>NOTÍCIAS</h2>
 		<div class="row">
@@ -85,6 +86,60 @@
 		</div>
 	</section>
 		
+	<section class="notas">
+		<h2>NOTAS</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card-noticias card-notas">
+					<div class="content-card">
+						<div class="title-news">
+							<h3>Lorem ipsum</h3>
+						</div>
+						<div class="excerpt">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card-noticias card-notas">
+					<div class="content-card">
+						<div class="title-news">
+							<h3>Lorem ipsum</h3>
+						</div>
+						<div class="excerpt">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card-noticias card-notas">
+					<div class="content-card">
+						<div class="title-news">
+							<h3>Lorem ipsum</h3>
+						</div>
+						<div class="excerpt">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="newsletter">
+		<div class="news-form">
+			<img src="<?php echo get_template_directory_uri() ?>/img/news-letter.png" alt="">
+		</div>
+	</section>
+
+	<section class="banner-d">
+		<div class="banner">
+			<img src="<?php echo get_template_directory_uri() ?>/img/banner-congresso.png" alt="">
+		</div>
+	</section>
+
 	<section>
 		<h2>VEREADORES</h2>
 		<div class="vereadores">
