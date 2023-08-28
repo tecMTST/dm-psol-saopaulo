@@ -15,6 +15,11 @@
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .navbar {
   height: 132px;
   padding: 16px 0;
@@ -162,4 +167,24 @@ footer p {
   text-align: center;
   height: 20px;
   color: #1a202c;
+}
+
+.topo-carrossel {
+  padding: 0;
+}
+
+.topo-carrossel .swiper-button-next, 
+.topo-carrossel .swiper-button-prev {
+  color: #2D3648;
+  font-weight: bold;
+  width: calc(var(--swiper-navigation-size)/ 44 * 40);
+}
+
+.topo-carrossel .swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,14px));
+  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,14px));
+}
+
+.topo-carrossel .swiper-pagination-bullet-active {
+  background: #000;
 }

@@ -9,6 +9,8 @@
     </title>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 	<?php wp_head(); ?>
   <script src="https://kit.fontawesome.com/17376cea64.js" crossorigin="anonymous"></script>
     <!--[if lt IE 9]>
