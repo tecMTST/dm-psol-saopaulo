@@ -3,7 +3,7 @@
 	Theme URI: 		https://nucleodetecnologia.com.br/
 	Description: 	Tema para o site do Diretório Municipal do PSOL - São Paulo, SP
 	Version: 			1.0
-	Author: 			Núcleo de Tecnlogoia do MTST
+	Author: 			Núcleo de Tecnologia do MTST
 	Author URI: 	https://nucleodetecnologia.com.br/
 	Tags: 				psol, mtst
 */
@@ -111,6 +111,16 @@ section h2 {
   margin-left: -10px;
   transition: 0.3s ease-in-out;
 }
+.vereadores-title{
+  font-family: 'Inter', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  padding-bottom: 4.81rem;
+}
+
+.vereadores-linha .row{
+  padding-bottom: 8.85rem;
+}
 
 .vereador img {
   object-fit: cover;
@@ -118,6 +128,13 @@ section h2 {
   height: 150px;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.vereador-p{
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 47.75rem;
 }
 
 footer {
