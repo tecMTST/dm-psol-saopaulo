@@ -10,10 +10,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Plus+Jakarta+Sans:wght@500;800&family=Roboto&display=swap");
 
-.wrapper {
-  width: 1280px;
-  margin: 0 auto;
+@font-face { 
+  font-family: 'Plus Jakarta Sans'; 
+  src: url('./fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
 }
+
+html { font-size: 16px; }
 
 img {
   max-width: 100%;
@@ -25,6 +29,10 @@ img {
   padding: 16px 0;
 }
 
+.navbar-collapse.show .navbar-nav{
+  margin-top: 2rem;
+}
+
 .navbar-brand {
   display: block;
   padding: 0;
@@ -33,6 +41,26 @@ img {
 .navbar-brand img {
   width: 245px;
 }
+
+.navbar .menu-item{
+margin: 0 3.13rem;
+}
+
+.navbar .menu-item a{
+  text-decoration: none;
+  color: #486284;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans';
+  font-size: 1rem;
+  line-height: 150%; /* 1.5rem */
+  letter-spacing: -0.03rem;
+  opacity: 0.9;
+}
+.current-menu-item a{
+  color: #4D0A7B !important;
+  font-weight: 800;
+}
+
 
 section {
   padding: 28px 0;
@@ -249,4 +277,26 @@ footer p {
 
 .news-form {
   text-align: center;
+}
+
+@media (max-width: 991px) {
+.vereadores{
+  flex-direction: row;
+}
+.vereadores-linha{
+  margin-right: -9rem;
+}
+.vereadores-linha .row {
+  padding-bottom: 3.85rem;
+}
+
+.vereador{
+  margin-bottom: 2rem;
+}
+.ver{
+  margin-right: 0;
+}
+.vereador-p{
+  width: 100%;
+}
 }

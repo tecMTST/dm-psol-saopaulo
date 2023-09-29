@@ -17,18 +17,18 @@ BsWp::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/heade
 			}
 			?>
 		</div>
-	<section class="vereadores-linha container">
+	<section class="vereadores-linha ver container">
 		<?php
 			if (have_rows('vereador', $vereadores_page)) {
 				while (have_rows('vereador', $vereadores_page)) : the_row();
 					$image = get_sub_field('imagem');
 					$nome = get_sub_field('nome');
 					$texto = get_sub_field('texto');
-					echo '<div class="row justify-content-center">';
-							echo '<div class="col-2 vereador">';
+					echo '<div class="row">';
+							echo '<div class="col-sm-2 vereador">';
 								echo '<img src="' . $image . '" alt="">';
 							echo '</div>';
-							echo '<div class="col-2">';
+							echo '<div class="col-sm-2">';
 								echo '<h2>'. $nome .'</h2>';
 								echo '<p class="vereador-p">'. $texto .'</p>';											
 

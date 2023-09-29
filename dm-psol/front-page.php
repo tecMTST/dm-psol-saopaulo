@@ -1,4 +1,11 @@
-<?php BsWp::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php
+/**
+* *Template Name: Front Page
+*
+*
+* @package dm-psol
+*/
+BsWp::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
 <div class="wrapper">
 	<section class="topo-carrossel">
@@ -140,7 +147,7 @@
 		</div>
 	</section>
 
-	<section>
+	<section class="container">
 		<h2>VEREADORES</h2>
 		<div class="vereadores">
 			<?php 
