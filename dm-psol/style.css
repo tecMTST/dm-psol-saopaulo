@@ -3,17 +3,21 @@
 	Theme URI: 		https://nucleodetecnologia.com.br/
 	Description: 	Tema para o site do Diretório Municipal do PSOL - São Paulo, SP
 	Version: 			1.0
-	Author: 			Núcleo de Tecnlogoia do MTST
+	Author: 			Núcleo de Tecnologia do MTST
 	Author URI: 	https://nucleodetecnologia.com.br/
 	Tags: 				psol, mtst
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Plus+Jakarta+Sans:wght@500;800&family=Roboto&display=swap");
 
-.wrapper {
-  width: 1280px;
-  margin: 0 auto;
+@font-face { 
+  font-family: 'Plus Jakarta Sans'; 
+  src: url('./fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
 }
+
+html { font-size: 16px; }
 
 img {
   max-width: 100%;
@@ -25,6 +29,10 @@ img {
   padding: 16px 0;
 }
 
+.navbar-collapse.show .navbar-nav{
+  margin-top: 2rem;
+}
+
 .navbar-brand {
   display: block;
   padding: 0;
@@ -33,6 +41,26 @@ img {
 .navbar-brand img {
   width: 245px;
 }
+
+.navbar .menu-item{
+margin: 0 3.13rem;
+}
+
+.navbar .menu-item a{
+  text-decoration: none;
+  color: #486284;
+  text-align: center;
+  font-family: 'Plus Jakarta Sans';
+  font-size: 1rem;
+  line-height: 150%; /* 1.5rem */
+  letter-spacing: -0.03rem;
+  opacity: 0.9;
+}
+.current-menu-item a{
+  color: #4D0A7B !important;
+  font-weight: 800;
+}
+
 
 section {
   padding: 28px 0;
@@ -111,6 +139,16 @@ section h2 {
   margin-left: -10px;
   transition: 0.3s ease-in-out;
 }
+.vereadores-title{
+  font-family: 'Inter', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  padding-bottom: 4.81rem;
+}
+
+.vereadores-linha .row{
+  padding-bottom: 8.85rem;
+}
 
 .vereador img {
   object-fit: cover;
@@ -118,6 +156,13 @@ section h2 {
   height: 150px;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.vereador-p{
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 47.75rem;
 }
 
 footer {
@@ -232,4 +277,26 @@ footer p {
 
 .news-form {
   text-align: center;
+}
+
+@media (max-width: 991px) {
+.vereadores{
+  flex-direction: row;
+}
+.vereadores-linha{
+  margin-right: -9rem;
+}
+.vereadores-linha .row {
+  padding-bottom: 3.85rem;
+}
+
+.vereador{
+  margin-bottom: 2rem;
+}
+.ver{
+  margin-right: 0;
+}
+.vereador-p{
+  width: 100%;
+}
 }
