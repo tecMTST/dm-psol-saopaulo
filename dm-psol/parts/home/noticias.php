@@ -1,63 +1,27 @@
     <section class="noticias">
         <div class="container">
             <h2>NOTÍCIAS</h2>
+            <?php if ( have_posts() ): ?>
             <div class="row">
+                <?php while ( have_posts() ) : the_post(); ?>
                 <div class="col-md-3">
-                    <div class="card-noticias">
-                        <div class="thumbnail-noticias" style="background:url(<?php echo get_template_directory_uri() ?>/img/boulos.jpg);background-size: cover;">
-                        </div>
-                        <div class="content-card">
-                            <div class="title-news">
-                                <h3>Lorem ipsum</h3>
+                    <a class="cards" href="<?php the_permalink(); ?>">
+                        <div class="card-noticias">
+                            <div class="thumbnail-noticias" style="background:url(<?php the_post_thumbnail_url(); ?>);background-size:cover;background-position:center;">
                             </div>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                            <div class="content-card">
+                                <div class="title-news">
+                                    <h3><?php the_title(); ?></h3>
+                                </div>
+                                <div class="excerpt">
+                                    <p><?php the_excerpt(); ?></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-md-3">
-                    <div class="card-noticias">
-                        <div class="thumbnail-noticias" style="background:url(<?php echo get_template_directory_uri() ?>/img/boulos.jpg);background-size: cover;">
-                        </div>
-                        <div class="content-card">
-                            <div class="title-news">
-                                <h3>Lorem ipsum</h3>
-                            </div>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-noticias">
-                        <div class="thumbnail-noticias" style="background:url(<?php echo get_template_directory_uri() ?>/img/boulos.jpg);background-size: cover;">
-                        </div>
-                        <div class="content-card">
-                            <div class="title-news">
-                                <h3>Lorem ipsum</h3>
-                            </div>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-noticias">
-                        <div class="thumbnail-noticias" style="background:url(<?php echo get_template_directory_uri() ?>/img/boulos.jpg);background-size: cover;">
-                        </div>
-                        <div class="content-card">
-                            <div class="title-news">
-                                <h3>Lorem ipsum</h3>
-                            </div>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile; ?>
             </div>
+            <?php endif; ?>
         </div>
 	</section>
