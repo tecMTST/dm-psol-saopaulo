@@ -128,3 +128,8 @@
     );
     register_post_type('vereadores', $args);
 	}
+
+	function wp_example_excerpt_length( $length ) {
+		return 18;
+	}
+	add_filter( 'excerpt_length', 'wp_example_excerpt_length');
