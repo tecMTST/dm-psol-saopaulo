@@ -1,43 +1,29 @@
+    <?php $new_query = new WP_Query( array(
+        'posts_per_page' => 3,
+        'post_type'      => 'nota'
+    ) ); ?>
     <section class="notas">
         <div class="container">
             <h2>NOTAS</h2>
+            <?php if ( $new_query->have_posts() ): ?>
             <div class="row">
+                <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
                 <div class="col-md-4">
-                    <div class="card-noticias card-notas">
-                        <div class="content-card">
-                            <div class="title-news">
-                                <h3>Lorem ipsum</h3>
-                            </div>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                    <a class="cards" href="<?php the_permalink(); ?>">
+                        <div class="card-noticias card-notas">
+                            <div class="content-card">
+                                <div class="title-news">
+                                    <h3><?php the_title(); ?></h3>
+                                </div>
+                                <div class="excerpt">
+                                    <p><?php the_excerpt(); ?></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-md-4">
-                    <div class="card-noticias card-notas">
-                        <div class="content-card">
-                            <div class="title-news">
-                                <h3>Lorem ipsum</h3>
-                            </div>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card-noticias card-notas">
-                        <div class="content-card">
-                            <div class="title-news">
-                                <h3>Lorem ipsum</h3>
-                            </div>
-                            <div class="excerpt">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endwhile; ?>
             </div>
+            <?php endif; ?>
         </div>
 	</section>
