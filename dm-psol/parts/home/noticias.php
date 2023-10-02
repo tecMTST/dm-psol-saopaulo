@@ -2,8 +2,9 @@
         <div class="container">
             <h2>NOTÍCIAS</h2>
             <?php if ( have_posts() ): ?>
+            <?php $i = 0; ?>
             <div class="row">
-                <?php while ( have_posts() ) : the_post(); ?>
+                <?php while ( have_posts() && $i < 4 ) : the_post(); ?>
                 <div class="col-md-3">
                     <a class="cards" href="<?php the_permalink(); ?>">
                         <div class="card-noticias">
@@ -20,6 +21,7 @@
                         </div>
                     </a>
                 </div>
+                <?php $i++; ?>
                 <?php endwhile; ?>
             </div>
             <?php endif; ?>
