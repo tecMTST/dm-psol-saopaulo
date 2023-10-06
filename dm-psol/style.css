@@ -25,12 +25,20 @@ img {
 }
 
 .navbar {
-  height: 132px;
-  padding: 16px 0;
+  height: 90px;
+  padding: 14px 0;
 }
 
 .navbar-collapse.show .navbar-nav{
   margin-top: 2rem;
+}
+
+.navbar .destaque.menu-item a {
+  background-color: #ffcc00;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #4D0A7A;
+  font-weight: bold;
 }
 
 .navbar-brand {
@@ -48,7 +56,7 @@ margin: 0 1rem;
 
 .navbar .menu-item a{
   text-decoration: none;
-  color: #486284;
+  color: #ffcc00;
   text-align: center;
   font-family: 'Plus Jakarta Sans';
   font-size: 1rem;
@@ -57,10 +65,13 @@ margin: 0 1rem;
   opacity: 0.9;
 }
 .current-menu-item a{
-  color: #4D0A7B !important;
-  font-weight: 800;
+  color: #ffcc00 !important;
+  font-weight: 800!important;
 }
 
+header {
+  background-color: #4D0A7B;
+}
 
 section {
   padding: 30px 0;
@@ -71,7 +82,7 @@ section {
 }
 
 section h2 {
-  color: #000;
+  color: #4D0A7B;
   font-family: Inter, sans-serif;
   font-size: 24px;
   font-style: normal;
@@ -80,13 +91,23 @@ section h2 {
   letter-spacing: -0.24px;
 }
 
+p {
+  font-family: Inter, sans-serif;
+}
+
 .vereadores {
   position: relative;
   clear: left;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0;
+  margin: 50px 0 0;
+  padding-top: 40px;
+}
+
+.home .vereadores h2 {
+  color: #ffcc00;
+  background-color: #4D0A7B;
 }
 
 .vereadores .vereadores-linha:nth-child(even) {
@@ -224,18 +245,18 @@ footer p {
 
 .topo-carrossel .swiper-button-next, 
 .topo-carrossel .swiper-button-prev {
-  color: #2D3648;
+  color: #4D0A7A;
   font-weight: bold;
   width: calc(var(--swiper-navigation-size)/ 44 * 40);
 }
 
 .topo-carrossel .swiper-pagination-bullet {
-  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,14px));
-  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,14px));
+  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px));
+  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,10px));
 }
 
 .topo-carrossel .swiper-pagination-bullet-active {
-  background: #000;
+  background: #4D0A7A;
 }
 
 .card-noticias {
@@ -284,6 +305,7 @@ a.cards {
   margin: 0 0 16px;
   font-weight: bold;
   font-size: 18px;
+  color: #000;
 }
 
 .news-form {
@@ -306,10 +328,26 @@ a.cards {
 
 .single main {
   padding-bottom: 30px;
+  padding-top: 140px;
 }
 
 strong {
   font-weight: bold;
+}
+
+.topo-carrossel {
+  padding: 140px 0 0;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    padding: 40px 0 0;
+  }
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
 }
 
 @media (max-width: 991px) {
