@@ -9,17 +9,17 @@
 				<a href="https://www.linkedin.com/company/" class="social-icon si-small h-bg-facebook">
 					<i class="fa-brands fa-facebook-f"></i>
 				</a>
-				<a href="https://twitter.com/" class="social-icon si-small me-0 h-bg-linkedin">
+				<a href="https://twitter.com/" class="social-icon si-small h-bg-linkedin">
 					<i class="fa-brands fa-twitter"></i>
 				</a>
-				<a href="https://www.instagram.com/" class="social-icon si-small me-0 h-bg-linkedin">
+				<a href="https://www.instagram.com/" class="social-icon si-small h-bg-linkedin">
 					<i class="fa-brands fa-instagram"></i>
 				</a>
-				<a href="https://www.linkedin.com/company/" class="social-icon si-small me-0 h-bg-linkedin">
+				<a href="https://www.linkedin.com/company/" class="social-icon si-small h-bg-linkedin">
 					<i class="fa-brands fa-linkedin"></i>
 				</a>
 			</div>
 		</div>
-		<p>Diretório Municial PSOL @ 2023. Todos direitos reservados.</p>
+		<p>Diretório Municipal PSOL São Paulo @ <?php echo date("Y"); ?>. Todos direitos reservados.</p>
 	</div>
 </footer>

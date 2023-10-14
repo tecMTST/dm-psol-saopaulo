@@ -17,6 +17,16 @@
   font-style: normal;
 }
 
+@font-face { 
+  font-family: 'Plus Jakarta Sans Semibold'; 
+  src: url('./fonts/static/PlusJakartaSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face { 
+  font-family: 'Plus Jakarta Sans Extra Bold'; 
+  src: url('./fonts/static/PlusJakartaSans-ExtraBold.ttf') format('truetype');
+}
+
 html { font-size: 16px; }
 
 img {
@@ -25,12 +35,25 @@ img {
 }
 
 .navbar {
-  height: 132px;
-  padding: 16px 0;
+  height: 90px;
+  padding: 14px 0;
 }
 
 .navbar-collapse.show .navbar-nav{
   margin-top: 2rem;
+}
+
+.navbar .destaque.menu-item a {
+  background-color: #ffd500;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #4D0A7A;
+  font-family: 'Plus Jakarta Sans Extra Bold';
+  transition: 0.5s;
+}
+
+.navbar .destaque.menu-item a:hover {
+  color: #4D0A7A;
 }
 
 .navbar-brand {
@@ -48,19 +71,23 @@ margin: 0 1rem;
 
 .navbar .menu-item a{
   text-decoration: none;
-  color: #486284;
+  color: #ffd500;
   text-align: center;
-  font-family: 'Plus Jakarta Sans';
+  font-family: 'Plus Jakarta Sans Semibold';
   font-size: 1rem;
   line-height: 150%; /* 1.5rem */
   letter-spacing: -0.03rem;
-  opacity: 0.9;
+  opacity: 1;
+  text-transform: uppercase;
 }
-.current-menu-item a{
-  color: #4D0A7B !important;
-  font-weight: 800;
+.current-menu-item a, .menu-item a:hover {
+  color: #ffd500;
+  font-family: 'Plus Jakarta Sans Extra Bold'!important; 
 }
 
+header {
+  background-color: #470075;
+}
 
 section {
   padding: 30px 0;
@@ -71,7 +98,7 @@ section {
 }
 
 section h2 {
-  color: #000;
+  color: #4D0A7B;
   font-family: Inter, sans-serif;
   font-size: 24px;
   font-style: normal;
@@ -80,13 +107,27 @@ section h2 {
   letter-spacing: -0.24px;
 }
 
-.vereadores {
+p {
+  font-family: Inter, sans-serif;
+}
+
+.home .vereadores {
   position: relative;
   clear: left;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0;
+  margin: 50px 0 0;
+  padding-top: 40px;
+}
+
+.home .vereadores {
+  background-color: #4D0A7B;
+}
+
+.home .vereadores h2 {
+  color: #ffd500;
+  
 }
 
 .vereadores .vereadores-linha:nth-child(even) {
@@ -224,18 +265,18 @@ footer p {
 
 .topo-carrossel .swiper-button-next, 
 .topo-carrossel .swiper-button-prev {
-  color: #2D3648;
+  color: #4D0A7A;
   font-weight: bold;
   width: calc(var(--swiper-navigation-size)/ 44 * 40);
 }
 
 .topo-carrossel .swiper-pagination-bullet {
-  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,14px));
-  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,14px));
+  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,10px));
+  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,10px));
 }
 
 .topo-carrossel .swiper-pagination-bullet-active {
-  background: #000;
+  background: #4D0A7A;
 }
 
 .card-noticias {
@@ -284,10 +325,22 @@ a.cards {
   margin: 0 0 16px;
   font-weight: bold;
   font-size: 18px;
+  color: #000;
 }
 
 .news-form {
-  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 2px solid var(--wf-base-800, #2D3648);
+  padding: 30px 14px 0;
+  margin-top: 20px;
+  height: auto;
+}
+
+
+.news-form h2 {
+  margin-bottom: 20px;
 }
 
 .single h2 {
@@ -316,20 +369,162 @@ strong {
 .vereadores{
   flex-direction: row;
 }
-.vereadores-linha{
-  margin-right: -9rem;
-}
-.vereadores-linha .row {
-  padding-bottom: 3.85rem;
+
+form.wpcf7-form.init {
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.vereador{
-  margin-bottom: 2rem;
+input[type="checkbox"] {
+  width: auto;
 }
-.ver{
-  margin-right: 0;
+
+span.wpcf7-list-item {
+  margin-left: 0;
 }
-.vereador-p{
+
+span.wpcf7-list-item-label {
+  font-weight: normal;
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+  background: var(--wf-base-800, #2D3648);
+  color: #fff;
+  font-weight: bold;
+}
+
+input.wpcf7-form-control.wpcf7-submit:hover {
+  background: #000;
+}
+
+input {
   width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid;
 }
+
+.single h2, .page h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.page .content p a {
+  color: #470075;
+}
+
+.single .thumbnail-post {
+  margin-bottom: 20px;
+}
+
+.single .content p, .page p {
+  font-size: 18px;
+}
+
+.single main {
+  padding-bottom: 30px;
+  padding-top: 140px;
+}
+
+.page .content {
+  padding-top: 140px;
+  padding-bottom: 30px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.topo-carrossel, .topo {
+  padding: 140px 0 0;
+}
+
+.content {
+  padding-top: 140px;
+}
+
+ul.sub-menu {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding-left: 0;
+  width: 210px;
+  background: #470075;
+  padding: 20px 10px 10px 10px;
+  margin: 0;
+  text-align: left;
+}
+
+.menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+
+
+
+#menu-principal .current-menu-ancestor.current-menu-parent a {
+  font-family: 'Plus Jakarta Sans Extra Bold';
+} 
+
+.navbar .sub-menu .menu-item {
+  margin: 0 0 10px 4px;
+  
+}
+
+.navbar .sub-menu .menu-item a {
+  font-family: 'Plus Jakarta Sans Semibold'!important;
+}
+
+.navbar .sub-menu .menu-item a {
+  font-family: 'Plus Jakarta Sans Semibold'!important;
+}
+
+.navbar .sub-menu .current_page_item.menu-item a,  .navbar .sub-menu .menu-item a:hover {
+  font-family: 'Plus Jakarta Sans Extra Bold'!important;
+}
+
+.only-mobile {
+  display: none!important;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-collapse {
+    padding: 40px 0 0;
+  }
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+}
+
+@media (max-width: 991px) {
+  .vereadores{
+    flex-direction: row;
+  }
+  .vereadores-linha{
+    margin-right: -9rem;
+  }
+  .vereadores-linha .row {
+    padding-bottom: 3.85rem;
+  }
+
+  .vereador{
+    margin-bottom: 2rem;
+  }
+  .ver{
+    margin-right: 0;
+  }
+  .vereador-p{
+    width: 100%;
+  }
+}
+
+@media (max-width:768px) {
+  .only-mobile {
+    display: block!important;
+  }
+  .only-desktop {
+    display: none!important;
+  }
 }
