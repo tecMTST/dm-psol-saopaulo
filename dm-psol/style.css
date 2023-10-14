@@ -34,11 +34,12 @@ img {
 }
 
 .navbar .destaque.menu-item a {
-  background-color: #ffcc00;
+  background-color: #ffd500;
   border-radius: 8px;
   padding: 10px 14px;
   color: #4D0A7A;
   font-weight: bold;
+  transition: 0.5s;
 }
 
 .navbar-brand {
@@ -56,21 +57,22 @@ margin: 0 1rem;
 
 .navbar .menu-item a{
   text-decoration: none;
-  color: #ffcc00;
+  color: #ffd500;
   text-align: center;
   font-family: 'Plus Jakarta Sans';
   font-size: 1rem;
   line-height: 150%; /* 1.5rem */
   letter-spacing: -0.03rem;
-  opacity: 0.9;
+  opacity: 1;
+  text-transform: uppercase;
 }
-.current-menu-item a{
-  color: #ffcc00 !important;
+.current-menu-item a, .menu-item a:hover {
+  color: #ffd500 !important;
   font-weight: 800!important;
 }
 
 header {
-  background-color: #4D0A7B;
+  background-color: #470075;
 }
 
 section {
@@ -95,7 +97,7 @@ p {
   font-family: Inter, sans-serif;
 }
 
-.vereadores {
+.home .vereadores {
   position: relative;
   clear: left;
   display: flex;
@@ -105,9 +107,13 @@ p {
   padding-top: 40px;
 }
 
-.home .vereadores h2 {
-  color: #ffcc00;
+.home .vereadores {
   background-color: #4D0A7B;
+}
+
+.home .vereadores h2 {
+  color: #ffd500;
+  
 }
 
 .vereadores .vereadores-linha:nth-child(even) {
@@ -309,10 +315,54 @@ a.cards {
 }
 
 .news-form {
-  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 2px solid var(--wf-base-800, #2D3648);
+  padding: 20px 14px;
+  margin-top: 20px;
+  height: 380px;
 }
 
-.single h2 {
+.news-form h2 {
+  margin-bottom: 20px;
+}
+
+form.wpcf7-form.init {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+span.wpcf7-list-item {
+  margin-left: 0;
+}
+
+span.wpcf7-list-item-label {
+  font-weight: normal;
+}
+
+input.wpcf7-form-control.wpcf7-submit {
+  background: var(--wf-base-800, #2D3648);
+  color: #fff;
+  font-weight: bold;
+}
+
+input.wpcf7-form-control.wpcf7-submit:hover {
+  background: #000;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.single h2, .page h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 30px;
@@ -322,7 +372,7 @@ a.cards {
   margin-bottom: 20px;
 }
 
-.single .content p {
+.single .content p, .page p {
   font-size: 18px;
 }
 
@@ -331,12 +381,21 @@ a.cards {
   padding-top: 140px;
 }
 
+.page .content {
+  padding-top: 140px;
+  padding-bottom: 30px;
+}
+
 strong {
   font-weight: bold;
 }
 
-.topo-carrossel {
+.topo-carrossel, .topo {
   padding: 140px 0 0;
+}
+
+.content {
+  padding-top: 140px;
 }
 
 @media (min-width: 992px) {
