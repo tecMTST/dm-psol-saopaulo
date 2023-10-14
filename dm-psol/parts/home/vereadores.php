@@ -1,6 +1,10 @@
     <section class="vereadores">
         <div class="container">
+
         <h2 style="text-align:center">VEREADORES DO PSOL SÃO PAULO</h2>
+
+		<h2>VEREADORES</h2>
+
             <div class="vereadores">
                 <?php 
                     $args = array(

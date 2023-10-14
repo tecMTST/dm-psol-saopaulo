@@ -338,8 +338,36 @@ a.cards {
   height: auto;
 }
 
+
 .news-form h2 {
   margin-bottom: 20px;
+}
+
+.single h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.single .thumbnail-post {
+  margin-bottom: 20px;
+}
+
+.single .content p {
+  font-size: 18px;
+}
+
+.single main {
+  padding-bottom: 30px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+@media (max-width: 991px) {
+.vereadores{
+  flex-direction: row;
 }
 
 form.wpcf7-form.init {
