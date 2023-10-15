@@ -28,7 +28,7 @@ BsWp::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/heade
 							echo '<div class="col-sm-2 vereador">';
 								echo '<img src="' . $image . '" alt="">';
 							echo '</div>';
-							echo '<div class="col-sm-2">';
+							echo '<div class="col-sm-8">';
 								echo '<h2>'. $nome .'</h2>';
 								echo '<p class="vereador-p">'. $texto .'</p>';											
 

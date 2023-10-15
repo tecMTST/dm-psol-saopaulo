@@ -13,9 +13,9 @@ BsWp::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/heade
 		
 <?php get_template_part('parts/home/notas'); ?>
 
-<?php get_template_part('parts/home/newsletter'); ?>
-
 <?php get_template_part('parts/home/banner'); ?>
+
+<?php get_template_part('parts/home/newsletter'); ?>
 
 <?php get_template_part('parts/home/vereadores'); ?>
 	

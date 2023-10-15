@@ -1,7 +1,8 @@
     <section class="vereadores">
         <div class="container">
         <h2 style="text-align:center">VEREADORES DO PSOL SÃO PAULO</h2>
-            <div class="vereadores">
+        
+            <a href="/vereadores"><div class="vereadores">
                 <?php 
                     $args = array(
                         'post_type' => 'vereadores',
@@ -33,6 +34,6 @@
                             }
                     }
                 ?>
-            </div>
+            </div></a>
         </div>
 	</section>
