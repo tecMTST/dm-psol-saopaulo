@@ -136,7 +136,7 @@ section.newsletter {
 }
 
 .vereadores .vereadores-linha:nth-child(even) {
-  margin-left: 130px;
+  margin-left: 0;
 }
 
 .vereador {
@@ -159,6 +159,18 @@ section.newsletter {
 .home section a h2:hover {
   text-decoration: underline;
   font-weight: bold;
+}
+
+.vereador p {
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  background: #00000061;
+  padding: 6px;
+  z-index: 999;
+  margin-top: 10px;
+  position: relative;
 }
 
 .vereador::before {
@@ -205,8 +217,8 @@ section.newsletter {
   padding-bottom: 4.81rem;
 }
 
-.vereadores-linha .row{
-  padding-bottom: 8.85rem;
+.vereadores-linha .row {
+  padding-bottom: 50px;
 }
 
 .vereador img {
@@ -255,6 +267,7 @@ footer .social a {
   line-height: 24px;
   color: #1a202c !important;
   margin-right: 16px;
+  text-decoration: auto;
 }
 
 footer .social a:hover {
@@ -478,8 +491,23 @@ ul.sub-menu {
 }
 
 .page-template-page-vereadores main {
-  padding-top: 40px;
+  padding-top: 120px;
 }
+
+.links-container {
+  display: flex;
+  align-items: center;
+}
+
+.parceiro img {
+  max-width: 100px;
+  height: auto;
+}
+
+.parceiros {
+  padding: 0 30px;
+}
+
 
 @media (max-width:1180px) {
   .navbar .menu-item a {
@@ -655,14 +683,43 @@ ul.sub-menu {
     margin-right: 0;
   }
   .vereador {
-    margin-left: 20px;
-    margin-right: 10px;
+    margin-left: 0;
+    margin-right: 0;
   }
   section {
     padding: 10px 0;
   }
   .news-form h2, .home .vereadores h2 {
     line-height: 1.3;
+  }
+  .page-template-page-vereadores main {
+    padding-top: 0;
+  }
+  .vereador img {
+    width: 120px;
+    height: 120px;
+  }
+  .vereador::before {
+    width: 120px;
+    height: 120px;
+  }
+  .vereador p {
+    /* padding: 6px 30px; */
+    max-width: 120px;
+    line-height: 1.4;
+  }
+  body.vereadores h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width:480px) {
+  .home div.vereadores {
+    flex-direction: row;
+    max-width: 94%;
+    margin: 40px auto 0;
+    float: right;
   }
 }
 

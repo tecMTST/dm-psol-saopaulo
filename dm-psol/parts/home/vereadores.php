@@ -23,6 +23,7 @@
                                     ?>
                                     <div class="vereador">
                                             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                                            <p><?php the_title(); ?></p>
                                     </div>
                                     <?php
                                     if ($counter % 3 == 0) {
