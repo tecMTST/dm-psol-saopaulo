@@ -1,11 +1,8 @@
     <section class="vereadores">
         <div class="container">
-
-        <h2 style="text-align:center">VEREADORES DO PSOL SÃO PAULO</h2>
-
-		<h2>VEREADORES</h2>
-
-            <div class="vereadores">
+                <a href="/vereadores"><h2 style="text-align:center">VEREADORES DO PSOL SÃO PAULO</h2></a>
+        
+            <a href="/vereadores"><div class="vereadores">
                 <?php 
                     $args = array(
                         'post_type' => 'vereadores',
@@ -26,6 +23,7 @@
                                     ?>
                                     <div class="vereador">
                                             <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                                            <p><?php the_title(); ?></p>
                                     </div>
                                     <?php
                                     if ($counter % 3 == 0) {
@@ -37,6 +35,6 @@
                             }
                     }
                 ?>
-            </div>
+            </div></a>
         </div>
 	</section>

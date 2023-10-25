@@ -28,12 +28,12 @@ BsWp::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/heade
 							echo '<div class="col-sm-2 vereador">';
 								echo '<img src="' . $image . '" alt="">';
 							echo '</div>';
-							echo '<div class="col-sm-2">';
+							echo '<div class="col-sm-8">';
 								echo '<h2>'. $nome .'</h2>';
 								echo '<p class="vereador-p">'. $texto .'</p>';											
 
 					if (have_rows('sociais')) {
-						echo '<ul class="nav flex-nowrap">';
+						echo '<ul class="nav">';
 						while (have_rows('sociais')) : the_row();
 							$icone = get_sub_field('icone');
 							$link = get_sub_field('link');

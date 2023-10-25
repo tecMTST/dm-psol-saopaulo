@@ -1,15 +1,15 @@
     <section class="noticias">
         <div class="container">
             <h2>NOTÍCIAS</h2>
-            <?php if ( have_posts() ): ?>
+            <?php $new_query = new WP_Query( array(
+                'posts_per_page' => 4,
+                'post_type'      => 'post'
+            ) ); ?>
+            <?php if (  $new_query->have_posts() ): ?>
             <?php $i = 0; ?>
             <div class="row">
-                <?php while ( have_posts() && $i < 4 ) : the_post(); ?>
-
+                <?php while (  $new_query->have_posts() && $i < 4 ) :  $new_query->the_post(); ?>
                 <div class="col-md-6 col-lg-3">
-
-                <div class="col-md-3">
-
                     <a class="cards" href="<?php the_permalink(); ?>">
                         <div class="card-noticias">
                             <div class="thumbnail-noticias" style="background:url(<?php the_post_thumbnail_url(); ?>);background-size:cover;background-position:center;">

@@ -2,7 +2,7 @@
 	Theme Name: 	Diretório Municipal do PSOL - São Paulo, SP
 	Theme URI: 		https://nucleodetecnologia.com.br/
 	Description: 	Tema para o site do Diretório Municipal do PSOL - São Paulo, SP
-	Version: 			1.0
+	Version: 			1.1
 	Author: 			Núcleo de Tecnologia do MTST
 	Author URI: 	https://nucleodetecnologia.com.br/
 	Tags: 				psol, mtst
@@ -111,27 +111,32 @@ p {
   font-family: Inter, sans-serif;
 }
 
-.home .vereadores {
+.home div.vereadores {
   position: relative;
   clear: left;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px 0 0;
-  padding-top: 40px;
+  margin: 40px 0 0;
+  padding: 0;
 }
 
-.home .vereadores {
+section.newsletter {
+  padding-bottom: 50px;
+}
+
+.home section.vereadores {
   background-color: #4D0A7B;
+  padding: 40px 0;
 }
 
-.home .vereadores h2 {
+.home section.vereadores h2 {
   color: #ffd500;
   
 }
 
 .vereadores .vereadores-linha:nth-child(even) {
-  margin-left: 130px;
+  margin-left: 0;
 }
 
 .vereador {
@@ -147,12 +152,33 @@ p {
   transition: all 0.4s;
 }
 
+.home section a {
+  text-decoration: none;
+}
+
+.home section a h2:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.vereador p {
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  background: #00000061;
+  padding: 6px;
+  z-index: 999;
+  margin-top: 10px;
+  position: relative;
+}
+
 .vereador::before {
   content: " ";
   display: inline-block;
   position: absolute;
   z-index: 0;
-  width: 130px;
+  width: 150px;
   height: 150px;
   background: #f8d11b;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -191,13 +217,13 @@ p {
   padding-bottom: 4.81rem;
 }
 
-.vereadores-linha .row{
-  padding-bottom: 8.85rem;
+.vereadores-linha .row {
+  padding-bottom: 50px;
 }
 
 .vereador img {
   object-fit: cover;
-  width: 130px;
+  width: 150px;
   height: 150px;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   -moz-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -241,6 +267,7 @@ footer .social a {
   line-height: 24px;
   color: #1a202c !important;
   margin-right: 16px;
+  text-decoration: auto;
 }
 
 footer .social a:hover {
@@ -284,7 +311,7 @@ footer p {
   border: 2px solid var(--wf-base-800, #2D3648);
   background: var(--wf-base-white, #FFF);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  height: 432px;
+  height: max-content;
 }
 
 .card-noticias.card-notas {
@@ -338,36 +365,8 @@ a.cards {
   height: auto;
 }
 
-
 .news-form h2 {
   margin-bottom: 20px;
-}
-
-.single h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.single .thumbnail-post {
-  margin-bottom: 20px;
-}
-
-.single .content p {
-  font-size: 18px;
-}
-
-.single main {
-  padding-bottom: 30px;
-}
-
-strong {
-  font-weight: bold;
-}
-
-@media (max-width: 991px) {
-.vereadores{
-  flex-direction: row;
 }
 
 form.wpcf7-form.init {
@@ -410,6 +409,11 @@ input {
   margin-bottom: 30px;
 }
 
+.home h2 {
+  font-weight: normal;
+}
+
+
 .page .content p a {
   color: #470075;
 }
@@ -442,6 +446,10 @@ strong {
 
 .content {
   padding-top: 140px;
+}
+
+.single .content {
+  padding-top: 0;
 }
 
 ul.sub-menu {
@@ -487,6 +495,31 @@ ul.sub-menu {
   display: none!important;
 }
 
+.page-template-page-vereadores main {
+  padding-top: 120px;
+}
+
+.links-container {
+  display: flex;
+  align-items: center;
+}
+
+.parceiro img {
+  max-width: 100px;
+  height: auto;
+}
+
+.parceiros {
+  padding: 0 30px;
+}
+
+
+@media (max-width:1180px) {
+  .navbar .menu-item a {
+    font-size: 0.8rem;
+  }
+}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-collapse {
     padding: 40px 0 0;
@@ -498,7 +531,7 @@ ul.sub-menu {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 993px) {
   .vereadores{
     flex-direction: row;
   }
@@ -520,6 +553,80 @@ ul.sub-menu {
   }
 }
 
+
+
+@media (max-width:993px) {
+  .navbar-toggler {
+    background-color: #ffd500;
+    padding: 6px 10px;
+  }
+  .collapse:not(.show) {
+    display: none!important;
+  }
+  .navbar {
+    height: max-content;
+    padding: 10px 0;
+    margin-bottom: 0;
+    float: right;
+  }
+  .navbar .menu-item {
+    margin: 1rem;
+  }
+  .navbar-brand {
+    margin-right: 9rem;
+  }
+  .navbar-toggler {
+    background-color: #ffd500;
+    padding: 6px 10px;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar .menu-item a {
+    font-size: 1rem;
+  } 
+  .menu-item-has-children:hover .sub-menu {
+    position: relative;
+  }
+  .navbar-brand img {
+    width: 120px;
+  }
+  .navbar-brand {
+    margin-right: 32rem;
+  }
+  .navbar-collapse {
+    padding-bottom: 30px;
+    margin-top: 10px;
+    transition: 0s;
+  }
+  .topo-carrossel, .topo {
+    padding: 30px 0 0;
+  }
+  .navbar-collapse {
+    padding-bottom: 30px;
+    margin-top: 10px;
+    transition: 0s;
+  }
+  .vereadores .vereadores-linha:nth-child(even) {
+    margin-left: 0;
+  }
+  .card-noticias {
+    margin-bottom: 30px;
+  }
+  .card-noticias.card-notas {
+    height: 370px;
+  }
+  .single main, .page .content {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .home .vereadores {
+    display: block;
+    margin: 30px 0 0;
+  }
+  
+}
+
 @media (max-width:768px) {
   .only-mobile {
     display: block!important;
@@ -527,4 +634,103 @@ ul.sub-menu {
   .only-desktop {
     display: none!important;
   }
+  .card-noticias.card-notas {
+    height: max-content;
+  }
+  .navbar-brand img {
+    width: 120px;
+  }
+  .navbar {
+    height: max-content;
+    padding: 10px 0;
+    margin-bottom: 0;
+    float: right;
+  }
+  .topo-carrossel, .topo {
+    padding: 30px 0 0;
+  }
+  .navbar-collapse {
+    padding-bottom: 30px;
+    margin-top: 10px;
+    transition: 0s;
+  }
+  .navbar .menu-item {
+    margin: 1rem;
+  }
+  .navbar-brand {
+    margin-right: 9rem;
+  }
+  .navbar-toggler {
+    background-color: #ffd500;
+    padding: 6px 10px;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar .menu-item a {
+    font-size: 1rem;
+  } 
+  .menu-item-has-children:hover .sub-menu {
+    position: relative;
+  }
+  .card-noticias {
+    margin-bottom: 30px;
+  }
+  .vereadores .vereadores-linha:nth-child(even) {
+    margin-left: 0;
+    margin: 0;
+  }
+  .home .vereadores {
+    display: block;
+    margin: 0;
+  }
+  .vereadores-linha {
+    margin-right: 0;
+  }
+  .vereador {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  section {
+    padding: 10px 0;
+  }
+  .news-form h2, .home .vereadores h2 {
+    line-height: 1.3;
+  }
+  .page-template-page-vereadores main {
+    padding-top: 0;
+  }
+  .vereador img {
+    width: 120px;
+    height: 120px;
+  }
+  .vereador::before {
+    width: 120px;
+    height: 120px;
+  }
+  .vereador p {
+    /* padding: 6px 30px; */
+    max-width: 120px;
+    line-height: 1.4;
+  }
+  body.vereadores h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width:480px) {
+  .home div.vereadores {
+    flex-direction: row;
+    max-width: 94%;
+    margin: 40px auto 0;
+    float: right;
+  }
+}
+
+@media (max-width: 359px) {
+  .navbar-brand {
+      margin-right: 6rem;
+  }
+  
 }
