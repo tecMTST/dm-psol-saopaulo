@@ -409,6 +409,10 @@ input {
   margin-bottom: 30px;
 }
 
+.home h2 {
+  font-weight: normal;
+}
+
 .page .content p a {
   color: #470075;
 }
