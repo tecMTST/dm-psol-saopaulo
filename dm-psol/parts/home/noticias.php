@@ -1,6 +1,6 @@
     <section class="noticias">
         <div class="container">
-            <h2>NOTÍCIAS</h2>
+            <a href="/noticias"><h2>NOTÍCIAS</h2></a>
             <?php $new_query = new WP_Query( array(
                 'posts_per_page' => 4,
                 'post_type'      => 'post'
