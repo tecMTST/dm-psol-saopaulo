@@ -313,7 +313,7 @@ footer p {
 
 .card-noticias {
   border-radius: 8px;
-  border: 2px solid var(--wf-base-800, #2D3648);
+  border: 2px solid var(--wf-base-800, #4D0A7B);
   background: var(--wf-base-white, #FFF);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   height: max-content;
@@ -326,7 +326,7 @@ footer p {
 
 .card-noticias .thumbnail-noticias {
   height: 214px;
-  border-bottom: 2px solid var(--wf-base-800, #2D3648);
+  border: none;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -364,7 +364,7 @@ a.cards {
   max-width: 600px;
   margin: 0 auto;
   border-radius: 8px;
-  border: 2px solid var(--wf-base-800, #2D3648);
+  border: 2px solid var(--wf-base-800, #4D0A7A);
   padding: 30px 14px 0;
   margin-top: 20px;
   height: auto;
