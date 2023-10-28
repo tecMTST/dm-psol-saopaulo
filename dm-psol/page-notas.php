@@ -1,21 +1,18 @@
 <?php BsWp::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<section class="noticias">
+<?php $new_query = new WP_Query( array(
+        'posts_per_page' => 12,
+        'post_type'      => 'nota'
+    ) ); ?>
+    <section class="notas">
         <div class="container">
-            <h2>NOTÍCIAS</h2>
-            <?php $new_query = new WP_Query( array(
-                'posts_per_page' => 16,
-                'post_type'      => 'post'
-            ) ); ?>
-            <?php if (  $new_query->have_posts() ): ?>
-            <?php $i = 0; ?>
+            <h2>NOTAS</h2>
+            <?php if ( $new_query->have_posts() ): ?>
             <div class="row">
-                <?php while (  $new_query->have_posts() && $i < 4 ) :  $new_query->the_post(); ?>
-                <div class="col-md-6 col-lg-3">
+                <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>
+                <div class="col-md-4">
                     <a class="cards" href="<?php the_permalink(); ?>">
-                        <div class="card-noticias">
-                            <div class="thumbnail-noticias" style="background:url(<?php the_post_thumbnail_url(); ?>);background-size:cover;background-position:center;">
-                            </div>
+                        <div class="card-noticias card-notas">
                             <div class="content-card">
                                 <div class="title-news">
                                     <h3><?php the_title(); ?></h3>
@@ -27,11 +24,10 @@
                         </div>
                     </a>
                 </div>
-                <?php $i++; ?>
                 <?php endwhile; ?>
             </div>
             <?php endif; ?>
         </div>
 	</section>
 
-<?php BsWp::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
+    <?php BsWp::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
