@@ -4,7 +4,7 @@
     ) ); ?>
     <section class="notas">
         <div class="container">
-            <h2>NOTAS</h2>
+            <a href="/notas"><h2>NOTAS</h2></a>
             <?php if ( $new_query->have_posts() ): ?>
             <div class="row">
                 <?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?>

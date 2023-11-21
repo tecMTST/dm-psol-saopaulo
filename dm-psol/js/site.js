@@ -1,37 +1,36 @@
 
-jQuery(document).ready(function($) {
-
-	// Your JavaScript goes here
-
-});
-
-const swiperBanners = function(){
+  const swiperNews = function(){
 	return swiper = new Swiper('.swiper', {
 	  // Default parameters
 	  slidesPerView: 1,
 	  spaceBetween: 10,
-	  speed: 500,
-	  autoplay: {
-		delay: 4000,
-	  },
-	  navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
-	  },
 	  pagination: {
 		el: '.swiper-pagination',
 		type: 'bullets',
+		dynamicBullets: true,
 		clickable: true,
 	  }, 
+	  navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	  },
 	  // Responsive breakpoints
 	  breakpoints: {
 		// when window width is >= 640px
-		640: {
-		  slidesPerView: 1,
-		  spaceBetween: 10,
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 10,
+		},
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 10,
+		},
+		1140: {
+			slidesPerView: 4,
+			spaceBetween: 10,
 		},   
 	  }
 	})
   }
   
-  swiperBanners();
+  swiperNews();

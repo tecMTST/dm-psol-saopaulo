@@ -133,3 +133,5 @@
 		return 18;
 	}
 	add_filter( 'excerpt_length', 'wp_example_excerpt_length');
+
+	add_theme_support( 'title-tag' );
