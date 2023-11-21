@@ -4,7 +4,7 @@
         <div class="container">
             <h2>PUBLICAÇÕES</h2>
             <?php $new_query = new WP_Query( array(
-                'posts_per_page' => 4,
+                'posts_per_page' => 16,
                 'post_type'      => 'post'
             ) ); ?>
             <?php if (  $new_query->have_posts() ): ?>
@@ -35,7 +35,7 @@
             <?php endif; ?>
            
         </div>
-        <?php wp_pagenavi( array( 'type' => 'multipart' ) ); ?>
+        
 	</section>
 
 <?php BsWp::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>
