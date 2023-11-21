@@ -1,4 +1,3 @@
-
   const swiperNews = function(){
 	return swiper = new Swiper('.swiper', {
 	  // Default parameters
@@ -23,11 +22,11 @@
 		},
 		992: {
 			slidesPerView: 3,
-			spaceBetween: 10,
+			spaceBetween: 14,
 		},
 		1140: {
 			slidesPerView: 4,
-			spaceBetween: 10,
+			spaceBetween: 14,
 		},   
 	  }
 	})

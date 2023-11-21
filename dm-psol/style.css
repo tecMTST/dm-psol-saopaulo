@@ -162,7 +162,6 @@ section.banner-d {
 
 .home section a h2:hover {
   text-decoration: underline;
-  font-weight: bold;
 }
 
 .vereador p {
@@ -325,7 +324,7 @@ footer p {
 }
 
 .card-noticias .thumbnail-noticias {
-  height: 214px;
+  height: 180px;
   border: none;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -554,6 +553,28 @@ ul.sub-menu {
   font-weight: bold;
 }
 
+.home .noticias {
+  padding-bottom: 0;
+}
+
+.single h3 {
+  margin-bottom: 1rem;
+}
+
+.title-news h3 {
+  margin: 0 0 14px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  overflow: hidden;
+  text-overflow: none;
+  display: -webkit-box;
+  /* line-height: 16px; */
+  max-height: 64px;
+  -webkit-line-clamp: 3;
+  /* -webkit-box-orient: vertical; */
+}
+
 @media (max-width:1180px) {
   .navbar .menu-item a {
     font-size: 0.8rem;
@@ -571,7 +592,17 @@ ul.sub-menu {
     z-index: 999;
   }
   .card-noticias .content-card {
-    min-height: 270px;
+    height: 260px;
+  }
+}
+
+@media (min-width:1440px) {
+  .title-news h3 {
+    max-height: fit-content;
+    -webkit-line-clamp: none;
+  }
+  .card-noticias .content-card {
+    height: 240px;
   }
 }
 
@@ -766,6 +797,7 @@ ul.sub-menu {
   }
   .card-noticias .content-card {
     padding: 14px 18px;
+    height: 206px;
   }
 }
 
