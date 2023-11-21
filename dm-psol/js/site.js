@@ -1,4 +1,3 @@
-
   const swiperNews = function(){
 	return swiper = new Swiper('.swiper', {
 	  // Default parameters
